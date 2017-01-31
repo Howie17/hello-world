@@ -44,6 +44,7 @@ body {
     float: left;
 }
 
+/*What's the best way to have this padding removed once #userreg drops below #userlogin when the webpage is resized, so that they are then vertically aligned?*/
 #userreg {
     padding: 0% 0% 0% 9%;
 }
