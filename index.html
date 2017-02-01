@@ -3,7 +3,6 @@
     <head>
         <title>Welcome</title>
         <link rel="stylesheet" href="stylesheet.css">
-        <script src="script.js"></script>
     </head>
     <body>
         <header>
@@ -23,7 +22,7 @@
                         <br/>
                         <p>Password: </p>
                             <input type="password" class="textbox" required/>
-                            <input type="button" value="Login" class="button"/>
+                            <input type="button" value="Login" class="button" id="login" />
                     </fieldset>
                 </form>
             </div>
@@ -32,11 +31,11 @@
                     <fieldset>
                         <legend>User Registration</legend>
                         <p>Username: </p>
-                            <input type="text" class="textbox" required/>
+                            <input type="text" class="textbox" id="newusername" required/>
                         <br/>
                         <p>Password: </p>
-                            <input type="password" class="textbox" required/>
-                            <input type="button" value="Register" class="button"/>
+                            <input type="password" class="textbox" id="newuserpassword" required/>
+                            <input type="button" value="Register" class="button" id="register" />
                     </fieldset>
                 </form>
             </div>
@@ -45,6 +44,6 @@
         <footer>
 
         </footer>
-        <script src="script.js"></script>
+        <!-- <script src=".js"></script> -->
     </body>
 </html>
