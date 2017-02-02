@@ -12,12 +12,16 @@ function onRequest(request, response){
     console.log("User made a request.");
     if( request.method == 'GET' && request.url == '/') {
         response.writeHead(200, {"Context-Type": "text/html"});
-        fs.createReadStream("./index.html").pipe(response);
+        fs.createReadStream("./public/index.html").pipe(response);
         console.log("User was sent index.html");
-    } else if (request.method == 'GET' && request.url == "stylesheet.css") {
+    } else if (request.method == 'GET' && request.url == "/stylesheet.css") {
         response.writeHead(200, {"Context-Type": "text/css"});
-        fs.createReadStream("./stylesheet.css").pipe(response);
+        fs.createReadStream("./public/stylesheet.css").pipe(response);
         console.log("User was sent stylesheet.css");
+    /*} else if (request.method == 'GET' && request.url == "/favicon.ico") {
+        response.writeHead(200, {"Context-Type": "image/vnd.microsoft.icon"});
+        fs.createReadStream("./stylesheet.css").pipe(response);
+        console.log("User was sent stylesheet.css"); */
     } else {
         send404Response(response);
         console.log("User was sent 404 error.")
